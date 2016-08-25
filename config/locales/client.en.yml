@@ -3151,5 +3151,23 @@ en:
           add: "Add"
           filter: "Search (URL or External URL)"
 
-# WARNING! Keys added here will be in the admin_js section.
-#          Keys that don't belong in admin should be placed earlier in the file.
+  wizard_js:
+    wizard:
+      next: "Next"
+      step:
+        forum_title:
+          title: "Welcome to your Discourse forum!"
+          description: "There are a few things you'll need to configure before inviting more people to the party. Don't worry, you can come back and change these settings at any time, so don't overthink it."
+
+          fields:
+            forum_title:
+              label: "Enter a title for your forum, like \"Jane's Hangout\""
+              placeholder: "Forum Title"
+        contact:
+          title: "Don't be a Stranger"
+          fields:
+            contact_email:
+              label: "Contact E-mail"
+              placeholder: "name@example.com"
+
+

@@ -1,4 +1,4 @@
-/*global document, sinon, QUnit, Logster */
+/*global document, sinon, Logster */
 
 //= require env
 //= require jquery.debug
@@ -8,9 +8,11 @@
 //= require ember.debug
 //= require ember-template-compiler
 //= require ember-qunit
+//= require ember-shim
 //= require wizard-application
 //= require helpers/assertions
 //= require_tree ./acceptance
+//= require locales/en
 
 // Trick JSHint into allow document.write
 var d = document;
@@ -28,10 +30,7 @@ var wizard = require('wizard/wizard').default.create({
 });
 wizard.setupForTesting();
 wizard.injectTestHelpers();
-
-QUnit.testDone(function() {
-  wizard.reset();
-});
+wizard.start();
 
 Object.keys(requirejs.entries).forEach(function(entry) {
   if ((/\-test/).test(entry)) {
